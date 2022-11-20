@@ -1,0 +1,10 @@
+# mac specific
+.DS_Store
+
+# builds
+dist/
+.idea/
+*egg-*/
+
+# pycache
+*pycache*/

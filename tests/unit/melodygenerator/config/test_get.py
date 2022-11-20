@@ -1,6 +1,7 @@
 import pytest
 
-from melodygenerator.config.get import DataType, get_config
+from melodygenerator.config.get import get_config
+from melodygenerator.enums import DataType
 
 
 @pytest.mark.parametrize(

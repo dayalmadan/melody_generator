@@ -1,18 +1,12 @@
 import os
 
 from configparser import ConfigParser
-from enum import Enum
 from typing import Any, Optional
+
+from melodygenerator.enums import DataType
 
 _CONFIG_DATA = ConfigParser()
 _CONFIG_FILE = os.path.join(os.path.dirname(__file__), "data.ini")
-
-
-class DataType(Enum):
-    INT = 1
-    FLOAT = 2
-    BOOL = 3
-    LIST = 4
 
 
 def _read_config() -> None:
