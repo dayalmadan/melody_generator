@@ -3,8 +3,8 @@ import random
 from abc import ABC, abstractmethod
 from typing import List, Optional, Tuple
 
-class Generator(ABC):
 
+class Generator(ABC):
     def __init__(self, notes_per_scale: int, note_lens: int):
         self.notes_per_scale = notes_per_scale
         self.note_lens = note_lens
@@ -18,6 +18,7 @@ class RandomGenerator(Generator):
     """
     A Generator to generate notes at random.
     """
+
     def __init__(self, note_len_prob: List[float], silence_prob: float, notes_per_scale: int):
         """
         :param note_len_prob: list of note length probabilities
