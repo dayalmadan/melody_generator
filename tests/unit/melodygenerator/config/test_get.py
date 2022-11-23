@@ -14,4 +14,4 @@ from melodygenerator.enums import DataType
 )
 def test_get_config(section, option, data_type, expected):
     actual = get_config(section, option, data_type)
-    assert expected == actual
+    assert actual == expected
