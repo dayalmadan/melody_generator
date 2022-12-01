@@ -3,7 +3,7 @@ import os
 from configparser import ConfigParser
 from typing import Any, Optional
 
-from melodygenerator.enums import DataType
+from melodygenerator.data.enums import DataType
 
 _CONFIG_DATA = ConfigParser()
 _CONFIG_FILE = os.path.join(os.path.dirname(__file__), "data.ini")
