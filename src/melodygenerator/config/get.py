@@ -39,12 +39,11 @@ def get_config(
     return _CONFIG_DATA.get(section, option, fallback=None)
 
 
-BEATS_PER_BAR = get_config(option="beats_per_bar", data_type=DataType.INT)
+# config common for all models
 MELODY_PATTERNS = get_config(option="melody_patterns", data_type=DataType.LIST)
 NOTE_LENGTHS = get_config(option="note_lengths", data_type=DataType.LIST)
 
-C_MAJOR = get_config(section="midiutil", option="c_major", data_type=DataType.LIST)
-C_MINOR = get_config(section="midiutil", option="c_minor", data_type=DataType.LIST)
 
+# Config for random model
 NOTE_PROBABILITIES = get_config(section="random", option="note_probabilities", data_type=DataType.LIST)
 SILENCE_PROBABILITY = get_config(section="random", option="silence_probability", data_type=DataType.FLOAT)
