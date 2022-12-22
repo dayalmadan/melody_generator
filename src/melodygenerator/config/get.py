@@ -41,7 +41,7 @@ def get_config(
 
 # config common for all models
 MELODY_PATTERNS = get_config(option="melody_patterns", data_type=DataType.LIST)
-NOTE_LENGTHS = get_config(option="note_lengths", data_type=DataType.LIST)
+NOTE_LENGTHS = get_config(option="note_len", data_type=DataType.LIST)
 
 
 # Config for random model

@@ -22,6 +22,7 @@ def play_melody(melody_pattern: str, pattern_memo: Dict[str, List[MidiData]], bp
         bar_number += 1
 
     mem_file = BytesIO()
+    midi.writeFile(mem_file)
     pygame.init()
     pygame.mixer.init()
     mem_file.seek(0)  # THIS IS CRITICAL, OTHERWISE YOU GET THAT ERROR!

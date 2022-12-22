@@ -27,7 +27,7 @@ def get_duration_from_id(duration_id: int, midi_time: float) -> float:
     note_len = mcg.NOTE_LENGTHS[duration_id]
     if note_len not in const.NOTE_DURATION_MAP:
         raise ValueError(f"{note_len} not found in NOTE_DURATION_MAP: {const.NOTE_DURATION_MAP}")
-    note_duration = const.NOTE_DURATION_MAP[note_len]
+    note_duration = const.NOTE_DURATION_MAP[note_len] * const.BEATS_PER_BAR
     # make sure note duration does not overflows in a bar
     if midi_time + note_duration > const.BEATS_PER_BAR:
         note_duration = const.BEATS_PER_BAR - midi_time
